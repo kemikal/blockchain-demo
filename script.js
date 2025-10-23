@@ -8,7 +8,7 @@ const validate = document.getElementById("validate")
 const blockchain = new Chain();
 window.blockchain = blockchain;
 
-async function renderChain() {
+function renderChain() {
 kedja.innerHTML = "";
 
 blockchain.chain.forEach(block => {
@@ -22,15 +22,15 @@ blockchain.chain.forEach(block => {
 
 async function init() {
 await blockchain.initialize();
-await renderChain();
+renderChain();
 }
 
 init();
 
 newBlockBtn.addEventListener("click", async () => {
 const data = newBlock.value;
-blockchain.addBlock(data);
-await renderChain();
+await blockchain.addBlock(data);
+renderChain();
 })
 
 validate.addEventListener("click", async () => {
