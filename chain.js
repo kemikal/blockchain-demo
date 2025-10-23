@@ -7,7 +7,8 @@ this.chain = []
 
 async initialize() {
 const genesis = new Block(0, new Date().toISOString(), "GenesisBlock", "");
-genesis.hash = await genesis.calculateHash();
+// USE MINE BLOCK NOW, NOT CALCULATEHASH
+genesis.hash = await genesis.mineBlock();
 this.chain.push(genesis);
 console.log("Genesis block skapat");
 }
@@ -15,7 +16,8 @@ console.log("Genesis block skapat");
 async addBlock(data) {
 const prevBlock = this.chain[this.chain.length -1];
 const newBlock = new Block(this.chain.length, new Date().toISOString(), data, prevBlock.hash )
-newBlock.hash = await newBlock.calculateHash();
+// USE MINE BLOCK NOW, NOT CALCULATEHASH
+newBlock.hash = await newBlock.mineBlock();
 this.chain.push(newBlock);
 console.log("new block skapad", newBlock);
 
