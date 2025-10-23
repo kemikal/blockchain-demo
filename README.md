@@ -1,25 +1,25 @@
 # Blockchain Demo
 
-Ett enkelt, pedagogiskt projekt som demonstrerar grunderna i en blockkedja med hjälp av ren JavaScript i webbläsaren. Här kan du skapa block, se hur de länkas samman via hashvärden och kontrollera om kedjan fortfarande är giltig.
+A simple, instructional project that demonstrates blockchain fundamentals using plain JavaScript in the browser. You can create blocks, inspect how they link together through hash values, and verify that the chain is still valid.
 
-## Funktioner
-- Skapar automatiskt ett genesis-block vid start.
-- Låter dig lägga till nya block med valfritt datafält.
-- Visar varje blocks index, data, hash och föregående hash i gränssnittet.
-- Validerar kedjan genom att verifiera hashvärden och länkarna mellan blocken.
+## Features
+- Auto-generates a genesis block at startup.
+- Lets you add new blocks with any data payload.
+- Displays each block’s index, data, hash, and previous hash in the UI.
+- Validates the chain by re-checking hashes and the links between blocks.
 
-## Kom igång
-1. Klona eller ladda ned projektet.
-2. Öppna `index.html` i en modern webbläsare (projektet kräver stöd för `crypto.subtle`).
-3. Ange valfri text i fältet och klicka på `Spara` för att lägga till ett nytt block.
-4. Använd knappen `Validera` för att kontrollera att kedjan är intakt.
-5. Öppna webbläsarens konsol för att experimentera vidare; kedjan exponeras på `window.blockchain`, så du kan t.ex. köra `blockchain.chain[1].data = "edit"` eller ta bort ett block med `blockchain.chain.splice(1,1)` innan du validerar för att se hur integritetskontrollen reagerar.
+## Getting Started
+1. Clone or download the project.
+2. Open `index.html` in a modern browser (the project depends on `crypto.subtle` support).
+3. Enter any text in the input field and click `Spara` to create a new block.
+4. Use the `Validera` button to confirm that the chain is still intact.
+5. Open the browser console to experiment further; the chain is exposed on `window.blockchain`, so you can run `blockchain.chain[1].data = "edit"` or remove a block with `blockchain.chain.splice(1, 1)` before validating to see how the integrity check reacts.
 
-## Struktur
-- `index.html` – enkelt gränssnitt för att interagera med kedjan.
-- `block.js` – definierar `Block`-klassen och hashberäkningen.
-- `chain.js` – hanterar blockkedjans logik, initiering och validering.
-- `script.js` – kopplar UI:t till kedjan och renderar blocken på sidan.
+## Structure
+- `index.html` – minimal UI for interacting with the chain.
+- `block.js` – defines the `Block` class and hash calculation.
+- `chain.js` – handles blockchain logic, initialization, and validation.
+- `script.js` – wires the UI to the chain and renders blocks on the page.
 
-## Licens
-Distribueras under MIT-licensen. Du får fritt använda, modifiera och distribuera projektet så länge licensinformationen inkluderas.
+## License
+Distributed under the MIT License. You may use, modify, and distribute this project freely as long as the license notice is preserved.
