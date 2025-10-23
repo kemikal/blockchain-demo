@@ -2,6 +2,8 @@
 
 A simple, instructional project that demonstrates blockchain fundamentals using plain JavaScript in the browser. You can create blocks, inspect how they link together through hash values, and verify that the chain is still valid.
 
+The first version, without mining, was coded live at Borås Tech Days 2025 in 45 minutes; the `mineBlock` logic was added afterward.
+
 ## Features
 - Auto-generates a genesis block at startup.
 - Lets you add new blocks with any data payload.
